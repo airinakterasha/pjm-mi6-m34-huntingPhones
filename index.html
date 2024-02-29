@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h2>Hunting Phone</h2>
+    </header>
+    <main class="container mx-auto mt-8">
+        <!-- Search input -->
+        <section class="text-center mb-20">
+            <input id="search-field" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch()" class="btn btn-accent mr-20">Accent</button> 
+            
+            <!-- Another search field -->
+
+            <input id="search-field2" type="text" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch2()" class="btn btn-primary">Primary</button>
+
+
+        </section>
+        
+        <section class="text-center">
+            <!-- spinner or loader -->
+            <div id="loading-spinner" class="text-red-700 my-40 hidden">
+                <span class="loading loading-ring loading-lg"></span>
+            </div>
+            <!-- Search result -->
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- 1st card start -->
+                
+                <!-- 1st card end -->
+            </div>
+            <div id="Show-all-container" class="text-center hidden my-20">
+                <button ondblclick="handleShowAll()" class="btn btn-neutral">Show more Phones</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/phone.js"></script>
+</body>
+</html>
